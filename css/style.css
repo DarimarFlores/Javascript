@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+}
+.concluida {
+    text-decoration: line-through;
+    color: #888;
+}
+#listaDeTarefas li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+#listaDeTarefas li:last-child {
+    border-bottom: none;
+}
+#listaDeTarefas button {
+    margin-left: 5px;
+    cursor: pointer;
+}
+.editando {
+    display: flex;
+}
+.editando input[type="text"] {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+#acoesGerais {
+    margin-top: 20px;
+}
