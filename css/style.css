@@ -1,31 +1,301 @@
-body {
-    font-family: sans-serif;
+/*body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.concluida {
-    text-decoration: line-through;
-    color: #888;
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+#adicionarTarefa {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#novaTarefa {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+#adicionarTarefa button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#adicionarTarefa button:hover {
+    background-color: #4cae4c;
+}
+
+#filtrarTarefasDiv {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#filtrarTarefasDiv label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#filtrarTarefas {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#listaDeTarefas {
+    list-style-type: none;
+    padding: 0;
+}
+
 #listaDeTarefas li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
 }
-#listaDeTarefas li:last-child {
-    border-bottom: none;
+
+#listaDeTarefas li:hover {
+    background-color: #f9f9f9;
 }
-#listaDeTarefas button {
-    margin-left: 5px;
-    cursor: pointer;
-}
-.editando {
-    display: flex;
-}
-.editando input[type="text"] {
+
+#listaDeTarefas li span {
     flex-grow: 1;
-    margin-right: 5px;
+    margin-right: 15px;
+    font-size: 16px;
+    word-break: break-word;
 }
+
+#listaDeTarefas li span.concluida {
+    text-decoration: line-through;
+    color: #777;
+}
+
+#listaDeTarefas li .editando input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#listaDeTarefas li .editando button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#listaDeTarefas li .editando button:hover {
+    background-color: #0056b3;
+}
+
+#listaDeTarefas li div button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#listaDeTarefas li div button:first-child {
+    margin-left: 0;
+}
+
+#listaDeTarefas li div button:hover {
+    background-color: #0056b3;
+}
+
+#listaDeTarefas li div button:nth-child(2) {
+    background-color: #f0ad4e;
+}
+
+#listaDeTarefas li div button:nth-child(2):hover {
+    background-color: #eea236;
+}
+
+#listaDeTarefas li div button:last-child {
+    background-color: #d9534f;
+}
+
+#listaDeTarefas li div button:last-child:hover {
+    background-color: #c9302c;
+}
+
 #acoesGerais {
+    text-align: center;
     margin-top: 20px;
 }
+
+#acoesGerais button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#acoesGerais button:hover {
+    background-color: #c9302c;
+}*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #343a40;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #212529;
+  }
+  
+  #adicionarTarefa,
+  #filtrarTarefasDiv,
+  #acoesGerais {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #495057;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0b5ed7;
+  }
+  
+  #filtrarTarefas {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ced4da;
+    background-color: white;
+  }
+  
+  ul#listaDeTarefas {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  ul#listaDeTarefas li {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  ul#listaDeTarefas li span {
+    flex-grow: 1;
+    word-break: break-word;
+  }
+  
+  ul#listaDeTarefas li span.concluida {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  ul#listaDeTarefas li.editando input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  ul#listaDeTarefas li div {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  ul#listaDeTarefas li button {
+    background-color: #198754;
+  }
+  
+  ul#listaDeTarefas li button:nth-child(2) {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  ul#listaDeTarefas li button:nth-child(3) {
+    background-color: #dc3545;
+  }
+  
+  ul#listaDeTarefas li.editando button {
+    background-color: #6f42c1;
+  }
+  
+  ul#listaDeTarefas li.editando button:nth-child(3) {
+    background-color: #6c757d;
+  }
